@@ -14,3 +14,32 @@
 
 
 -- Simple
+    Java is simple, clean and easy to understand
+    You don't need to remove unreferenced objects
+        because Java has Automatic Garbage Collection.
+
+-- Object-Oriented
+    Anything in Java is object
+    The basic concepts of Object-Oriented Programming (OOP)
+        Object
+        Class
+        Inheritance
+        Polymorphism
+        Abstraction
+        Encapsulation
+
+-- Portable
+    Java's portability allows developers to <write code once and run it anywhere> with JVM
+
+-- Platform Independent
+    Java is a software-based platform. Java code will be compiled and converted into bytecode by compiler
+    Bytecode is platform-independent because it can run various platforms.
+
+-- Secured
+    Java is secure because
+        No explicit pointers
+        Java programs run inside a virtual machine sandbox
+
+-- Robust
+    Robust is strong
+    It employs strong memory management
