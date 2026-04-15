@@ -1,0 +1,5 @@
+Data types
+    primitive data types (in stack)
+        boolean, char, byte, short, int, long, float, double
+    non-primitive data types (in heap)
+        Classes, Interfaces, String and Arrays

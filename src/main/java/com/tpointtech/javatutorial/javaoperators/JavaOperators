@@ -1,0 +1,8 @@
+Unary Operator          - + ! ~ ++ --
+Arithmetic Operator     + - / * %
+Relational Operator     < > == >= <= !=
+Ternary Operator        (if) ? (then) : (else)
+Assignment Operator     = += -= *= /= %=
+Bitwise Operator        | & ^ ~
+Logical Operator        && || !
+Shift Operator          >> << >>> <<<
