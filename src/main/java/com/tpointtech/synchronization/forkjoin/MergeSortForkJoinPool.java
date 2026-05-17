@@ -3,7 +3,7 @@ package com.tpointtech.synchronization.forkjoin;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.concurrent.ForkJoinPool;
-import java.util.concurrent.RecursiveTask;
+import java.util.concurrent.RecursiveAction;
 
 public class MergeSortForkJoinPool {
     static void main() {
@@ -37,7 +37,7 @@ public class MergeSortForkJoinPool {
     }
 }
 
-class MergeSortTask extends RecursiveTask<Integer> {
+class MergeSortTask extends RecursiveAction {
     private static final int THRESHOLD = 100;
     final int[] arr;
     final int start;
@@ -54,10 +54,10 @@ class MergeSortTask extends RecursiveTask<Integer> {
     }
 
     @Override
-    protected Integer compute() {
+    protected void compute() {
         if ((end - start) <= THRESHOLD) {
             Arrays.sort(arr, start, end);
-            return 0;
+            return;
         }
 
         int mid = start + (end - start) / 2;
@@ -67,7 +67,7 @@ class MergeSortTask extends RecursiveTask<Integer> {
         MergeSortTask t2 = new MergeSortTask(arr, mid, end);
 
         t1.fork();
-        Integer rightResult = t2.compute();
+        t2.compute();
         t1.join();
 
         int[] temp = new int[end - start];
@@ -84,7 +84,5 @@ class MergeSortTask extends RecursiveTask<Integer> {
             System.arraycopy(arr, i, arr, start + k, mid - i);
 
         System.arraycopy(temp, 0, arr, start, k);
-
-        return 0;
     }
 }
