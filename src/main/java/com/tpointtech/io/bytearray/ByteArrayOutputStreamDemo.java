@@ -9,8 +9,9 @@ public class ByteArrayOutputStreamDemo {
         // The stored data in byte array output stream can be
         //      written to multiple output streams later
 
-        String filePath1 = "src/main/java/com/tpointtech/io/bytearray/file1.txt";
-        String filePath2 = "src/main/java/com/tpointtech/io/bytearray/file2.txt";
+        String basePath = "src/main/java/com/tpointtech/io/bytearray";
+        String filePath1 = basePath + "/file1.txt";
+        String filePath2 = basePath + "/file2.txt";
 
         try (ByteArrayOutputStream os = new ByteArrayOutputStream()) {
 
