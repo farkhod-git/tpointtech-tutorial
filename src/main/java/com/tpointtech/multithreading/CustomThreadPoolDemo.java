@@ -8,15 +8,17 @@ public class CustomThreadPoolDemo {
 
     static void main() {
         try (CustomThreadPool customThreadPool = new CustomThreadPool(4)) {
+            Runnable task = () -> {
+                System.out.println(Thread.currentThread().getName() + " toke work");
+                try {
+                    Thread.sleep(new Random().nextInt(1, 5) * 1000L);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+            };
+
             for (int i = 0; i < 10; i++) {
-                customThreadPool.execute(() -> {
-                    System.out.println(Thread.currentThread().getName() + " toke work");
-                    try {
-                        Thread.sleep(new Random().nextInt(1, 5) * 1000L);
-                    } catch (InterruptedException e) {
-                        throw new RuntimeException(e);
-                    }
-                });
+                customThreadPool.execute(task);
             }
         }
     }
