@@ -1,4 +1,4 @@
-package com.tpointtech.filehandling;
+package com.tpointtech.io.filehandling;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;

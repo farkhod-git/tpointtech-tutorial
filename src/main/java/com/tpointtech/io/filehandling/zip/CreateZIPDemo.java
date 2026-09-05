@@ -1,4 +1,4 @@
-package com.tpointtech.filehandling.zip;
+package com.tpointtech.io.filehandling.zip;
 
 import java.io.*;
 import java.util.zip.ZipEntry;

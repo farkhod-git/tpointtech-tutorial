@@ -1,6 +1,4 @@
-package com.tpointtech.filehandling;
-
-import java.io.FileDescriptor;
+package com.tpointtech.io.filehandling;
 
 public class FileDescriptorDemo {
     static void main() {
